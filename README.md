@@ -73,3 +73,27 @@ docker compose down
 ```
 
 Repeat the same pattern for the other three folders.
+
+## Caddyfile snippet
+
+Paste the following into your Caddyfile if you want to expose the services through a single reverse proxy:
+
+```caddy
+api.example.com {
+    reverse_proxy localhost:432
+}
+
+control.example.com {
+    reverse_proxy localhost:956
+}
+
+queue.example.com {
+    reverse_proxy localhost:765
+}
+
+www.example.com {
+    reverse_proxy localhost:631
+}
+```
+
+Replace the example domains with your real domain names.
