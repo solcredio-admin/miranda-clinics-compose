@@ -19,41 +19,16 @@ Make sure Docker is installed and running on your machine.
 - Docker Engine with the Compose plugin
 - https://docs.docker.com/engine/install/ubuntu/
 
-## Start each service step by step
+## Start everything from one file
 
-From the repository root, open a terminal and run the following commands one by one.
-
-### 1) API
+From the repository root, run:
 
 ```bash
-cd miranda-clinics-api
 docker compose pull
 docker compose up -d
 ```
 
-### 2) Control
-
-```bash
-cd ../miranda-clinics-control
-docker compose pull
-docker compose up -d
-```
-
-### 3) Queue
-
-```bash
-cd ../miranda-clinics-queue
-docker compose pull
-docker compose up -d
-```
-
-### 4) Web
-
-```bash
-cd ../miranda-clinics-web
-docker compose pull
-docker compose up -d
-```
+This uses the consolidated root Compose file at [compose.yaml](compose.yaml).
 
 ## Access points
 
@@ -66,14 +41,11 @@ After startup, the services should be available at:
 
 ## Stop the services
 
-To stop them later, run the same commands with `down` in each directory:
+To stop everything later, run:
 
 ```bash
-cd miranda-clinics-api
 docker compose down
 ```
-
-Repeat the same pattern for the other three folders.
 
 ## Caddyfile snippet
 

@@ -1,0 +1,32 @@
+services:
+  miranda-clinics-api:
+    image: ghcr.io/solcredio-admin/miranda-clinics-api-test:master
+    container_name: miranda-clinics-api
+    restart: unless-stopped
+    pull_policy: always
+    ports:
+      - "432:3000"
+
+  miranda-clinics-control:
+    image: ghcr.io/solcredio-admin/miranda-clinics-qms:latest
+    container_name: miranda-clinics-control
+    restart: unless-stopped
+    pull_policy: always
+    ports:
+      - "956:3000"
+
+  miranda-clinics-queue:
+    image: ghcr.io/solcredio-admin/mc-queue-dashboard:master
+    container_name: miranda-clinics-queue
+    restart: unless-stopped
+    pull_policy: always
+    ports:
+      - "765:80"
+
+  miranda-clinics-web:
+    image: ghcr.io/crafted4u/miranda-clinics-web:latest
+    container_name: miranda-clinics-web
+    restart: unless-stopped
+    pull_policy: always
+    ports:
+      - "631:80"
