@@ -2,33 +2,32 @@
 
 This repository contains four separate Docker Compose stacks for the Miranda Clinics services.
 
-## Clone on a server
+## Requirements
 
-Run the following commands on your server CLI to clone the repository and enter the project folder:
+**Docker must be installed and running on your machine.**
+
+- Docker Desktop on macOS, or
+- Docker Engine with the Compose plugin
+- Installation guide: https://docs.docker.com/engine/install/ubuntu/
+
+## Quick start
+
+Run this single command to clone, enter the folder, and start all services:
+
+```bash
+git clone https://github.com/solcredio-admin/miranda-clinics-compose.git && cd miranda-clinics-compose && docker compose pull && docker compose up -d
+```
+
+## Manual steps (alternative)
+
+If you prefer to run commands separately:
 
 ```bash
 git clone https://github.com/solcredio-admin/miranda-clinics-compose.git
 cd miranda-clinics-compose
-```
-
-## Requirements
-
-Make sure Docker is installed and running on your machine.
-
-- Docker Desktop on macOS, or
-- Docker Engine with the Compose plugin
-- https://docs.docker.com/engine/install/ubuntu/
-
-## Start everything from one file
-
-From the repository root, run:
-
-```bash
 docker compose pull
 docker compose up -d
 ```
-
-This uses the consolidated root Compose file at [compose.yaml](compose.yaml).
 
 ## Access points
 
