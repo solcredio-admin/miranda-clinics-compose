@@ -1,4 +1,4 @@
-# compose-mirandaclinics
+# miranda-clinics-compose
 
 This repository contains four separate Docker Compose stacks for the Miranda Clinics services.
 
@@ -17,6 +17,7 @@ Make sure Docker is installed and running on your machine.
 
 - Docker Desktop on macOS, or
 - Docker Engine with the Compose plugin
+- https://docs.docker.com/engine/install/ubuntu/
 
 ## Start each service step by step
 
