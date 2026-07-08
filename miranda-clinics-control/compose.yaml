@@ -1,0 +1,12 @@
+services:
+  miranda-clinics-web:
+    image: ghcr.io/solcredio-admin/miranda-clinics-qms:latest
+    container_name: miranda-clinics-control
+
+    restart: unless-stopped
+
+    pull_policy: always
+
+    ports:
+      - "956:3000"
+

@@ -1,0 +1,11 @@
+services:
+  miranda-clinics-web:
+    image: ghcr.io/crafted4u/miranda-clinics-web:latest
+    container_name: miranda-clinics-web
+
+    restart: unless-stopped
+
+    pull_policy: always
+
+    ports:
+      - "631:80"

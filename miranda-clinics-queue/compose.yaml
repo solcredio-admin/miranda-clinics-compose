@@ -1,0 +1,18 @@
+services:
+  miranda-clinics-web:
+    image: ghcr.io/solcredio-admin/mc-queue-dashboard:sha-9b072ab
+    container_name: miranda-clinics-que
+
+    restart: unless-stopped
+
+    pull_policy: always
+
+    ports:
+      - "765:80"
+
+
+
+
+
+
+

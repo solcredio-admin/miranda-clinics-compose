@@ -1,0 +1,11 @@
+services:
+  miranda-clinics-web:
+    image: ghcr.io/solcredio-admin/miranda-clinics-api-test:master
+    container_name: miranda-clinics-api
+
+    restart: unless-stopped
+
+    pull_policy: always
+
+    ports:
+      - "432:3000"
