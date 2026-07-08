@@ -18,17 +18,6 @@ Run this single command to clone, enter the folder, and start all services:
 git clone https://github.com/solcredio-admin/miranda-clinics-compose.git && cd miranda-clinics-compose && docker compose pull && docker compose up -d
 ```
 
-## Manual steps (alternative)
-
-If you prefer to run commands separately:
-
-```bash
-git clone https://github.com/solcredio-admin/miranda-clinics-compose.git
-cd miranda-clinics-compose
-docker compose pull
-docker compose up -d
-```
-
 ## Access points
 
 After startup, the services should be available at:
