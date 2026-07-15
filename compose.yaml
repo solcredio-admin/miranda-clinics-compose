@@ -24,7 +24,7 @@ services:
       - "765:80"
 
   miranda-clinics-web:
-    image: ghcr.io/crafted4u/miranda-clinics-web:latest
+    image: ghcr.io/solcredio-admin/miranda-clinics:latest
     container_name: miranda-clinics-web
     restart: unless-stopped
     pull_policy: always
